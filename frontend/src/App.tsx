@@ -9,6 +9,7 @@ import UserProfile from './pages/UserProfile';
 import VendorProfile from './pages/VendorProfile';
 import HeroSectionOne from './components/hero-section-demo-1';
 import { FollowerPointerCard, FollowPointer } from './components/ui/following-pointer';
+import SignupFormDemo from './components/signup-form-demo';
 
 function App() {
   const { user, isAuthenticated } = useAuth();
@@ -16,12 +17,12 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        <Route path="/" element={<HeroSectionOne />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path="hero" element={<HeroSectionOne/>} />
+        <Route path="/register" element={<SignupFormDemo />} />
+        {/* <Route path="hero" element={<HeroSectionOne/>} /> */}
 
-        <Route path='following' element={<FollowerPointerCard{,,"Garv"}/>} />
+        {/* <Route path='following' element={<FollowerPointerCard{"Garv"}/>} /> */}
         <Route 
           path="/user/dashboard" 
           element={
